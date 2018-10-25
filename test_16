@@ -1,0 +1,4 @@
+@addPages a b c
+@isConnected a b
+@isConnected b c
+@isConnected d a

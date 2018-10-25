@@ -1,0 +1,14 @@
+#!/usr/bin/ksh
+
+for file in $(ls test_??) ; do
+  ./linked < $file > "${file}.stdin.student"
+  echo $? >> "${file}.stdin.student"
+  ./exLinked < $file > "${file}.stdin.master"
+  echo $? >> "${file}.stdin.master"
+  diff "${file}.stdin.student" "${file}.stdin.master" > "${file}.stdin.diff"
+  ./linked $file > "${file}.file.student"
+  echo $? >> "${file}.file.student"
+  ./exLinked $file > "${file}.file.master"
+  echo $? >> "${file}.file.master"
+  diff "${file}.file.student" "${file}.file.master" > "${file}.file.diff"
+done

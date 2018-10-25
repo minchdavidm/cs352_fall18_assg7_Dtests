@@ -1,0 +1,4 @@
+@addPages alpha beta
+@addLinks alpha beta
+@isConnected alpha beta
+@isConnected alpha alpha

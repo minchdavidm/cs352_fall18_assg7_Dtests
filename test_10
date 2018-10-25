@@ -1,0 +1,20 @@
+@addPages page1 page2 page3 page4
+@addLinks page1 page3 page4
+
+@isConnected page1 page2
+@isConnected page1 page3
+@addLinks page3 page1 page2 page3
+@isConnected page1 page2
+@isConnected page3 page4
+   	 
+@isConnected page4 page1
+@isConnectedx page1 page2
+@not_a_command bah bah bah
+@isConnected fake page
+@isConnected page1 page2 page3
+@addLinks fake page
+@addLinks page1 fake
+@addLinks fake page1
+@addPages page1
+@addLinks page1 page3 page4
+@fake page
